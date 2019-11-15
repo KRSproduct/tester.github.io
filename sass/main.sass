@@ -52,9 +52,10 @@ a, a > span
   left: 0
   right: 0
   background: rgba(0, 0, 0, 0.7)
-  transition: opacity 500ms
+  transition: opacity .5s
   opacity: 0
   overflow: hidden
+  display: none
   .popup-wrapper
   	position: relative
   	padding: 20px
@@ -70,6 +71,7 @@ a, a > span
   	.desc
   		font-size: 14px
 .show
+	display: block
 	opacity: 1
 	overflow: visible
 
