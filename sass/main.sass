@@ -38,6 +38,40 @@ a, a > span
     content: ''
     position: absolute
     transition: transform .5s ease
+.close
+	position: absolute
+	font-size: 42px
+	right: -35px
+	top: -55px
+	cursor: pointer
+	color: #fff
+.timer-popup
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(0, 0, 0, 0.7)
+  transition: opacity 500ms
+  opacity: 0
+  overflow: hidden
+  .popup-wrapper
+  	position: relative
+  	padding: 20px
+  	background: #fff
+  	width: 30%
+  	margin: 0 auto
+  	top: calc(50% - 50px)
+  	transition: all 5s ease-in-out
+  	text-align: center
+  	
+  	.title
+  		font-size: 24px
+  	.desc
+  		font-size: 14px
+.show
+	opacity: 1
+	overflow: visible
 
 .is-home
  	position: relative
@@ -97,7 +131,7 @@ a, a > span
 	position: fixed
 	z-index: 2
 	width: 100%
-	background: rgba(#fff, .3)
+	background: rgba(#f0f0f0, .8)
 	.top-line
 		display: flex
 		flex-direction: row
@@ -239,4 +273,135 @@ a, a > span
 		.fotorama__thumb
 			border-color: #3d3c3c
 
+.section-callback
+	background: url("../img/call-back_bkg.png")
+	background-size: cover
+	position: relative
+	&::before
+			content: ''
+			position: absolute
+			width: 50%
+			right: 0
+			height: 100%
+			background-color: rgba(248, 200, 105, 0.6)
+	.callback-wrapper
+		display: grid
+		grid-template-columns: repeat(8,1fr)
+		position: relative
+		.callback
+			grid-column-start: 5
+			grid-column-end: 9
+			color: #000
+			padding: 10%
+		input, textarea, select,
+		.selectize-control.single .selectize-input.input-active, .selectize-input
+			color: #fff
+			width: 100%
+			margin-top: 17px
+
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 1
+		&:-moz-placeholder
+			color: #fff
+			opacity: 1
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+		&:-ms-input-placeholder
+			color: #fff
+
+		option
+			color: #222
+	button
+		margin-top: 40px
+
+	&-logo
+		img
+			width: 100px
+			height: auto
+	.formhead
+		margin-top: 0
+		line-height: 1.5
+		white-space: nowrap
+		margin-bottom: 0
+		font-size: 30px
+		text-transform: uppercase
+		font-weight: 800
+	p
+		margin-top: 0
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: bold
+	display: flex
+	z-index: 10
+	display: none
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 16px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 30%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+	
+	&.button-white
+		background-color: #fff
+		border: 2px solid $dark
+		color: #444
+		&::after
+			background-color: rgba(#000, .6)
+		&:hover
+			&::after
+				background-color: rgba(#000, 1)
+		&:active
+			&::after
+				background-color: rgba(#000, .4)
 @import "media" // Always at the end

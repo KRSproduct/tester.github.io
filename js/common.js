@@ -24,7 +24,17 @@ $('.product-carousel').owlCarousel({
 	}
 });
 
+setTimeout(function(){
+	$('#popup-timer').addClass('show');
+}, 5000);
+
 $(".navigation-item a").mPageScroll2id();
+$(".close").on('click', function(){
+	$("#popup-timer").removeClass('show');
+});
+
+
+
 
 
 function isEmail(email) {
@@ -47,7 +57,7 @@ function completeInviteForm() {
 var erdiv    = $("#error");
 var btnwrap  = $("#btnwrap");
 $(document).ready(function(){
-      $("#sendbtn").live("click", function(e){
+      $("#sendbtn").on("click", function(e){
          // После нажатия на кнопку отменяем стандартное поведение браузера
          // и создаем переменную
          e.preventDefault();
