@@ -23,21 +23,24 @@
 		<div class="navigation">
 			<div class="navigation-item">
 				<a class="tooltip" href="#section-1"></a>
-				<a class="tooltip-text" href="#section-1">text-1</a>
+				<a class="tooltip-text" href="#section-1">Section-1</a>
 			</div>
 			<div class="navigation-item">
 				<a class="tooltip" href="#section-2"></a>
-				<a class="tooltip-text" href="#section-2">text-2</a>
+				<a class="tooltip-text" href="#section-2">Section-2</a>
 			</div>
 			<div class="navigation-item">
-				<a class="tooltip" href="#"></a>
-				<a class="tooltip-text">text-3</a>
+				<a class="tooltip" href="#section-3"></a>
+				<a class="tooltip-text" href="#section-3">Section-3</a>
 			</div>
 			<div class="navigation-item">
-				<a class="tooltip" href="#"></a>
-				<a class="tooltip-text">text-4</a>
+				<a class="tooltip" href="#section-4"></a>
+				<a class="tooltip-text" href="#section-4">Section-4</a>
 			</div>
-
+			<div class="navigation-item">
+				<a class="tooltip" href="#section-5"></a>
+				<a class="tooltip-text" href="#section-5">Section-5</a>
+			</div>
 		</div>
 	</div>
 	<header class="header">
@@ -54,26 +57,34 @@
 							<div class="facebook soc"><i class="fa fa-facebook"></i></div>
 							<div class="facebook soc"><i class="fa fa-instagram"></i></div>
 						</div>
+						<div class="multilanguage">
+							<select>
+								<option value="Ua" id="ua">Ua</option>
+								<option value="Ru" id=ru>Ru</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="header-text-composition">
-			<div class="title">Lorem ipsum.</div>
-			<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nobis?</div>
-			<div class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tenetur, animi consequuntur possimus odio quasi, voluptatibus quaerat non ducimus blanditiis velit laudantium veritatis recusandae, eum. Accusamus dignissimos animi a, quidem saepe voluptatem eos ut voluptatum laborum natus voluptas non architecto?</div>
+			<div class="title ua">Текст, який</div>
+			<div class="title ru">Текст, который</div>
+			<div class="description ua">написаний українською мовою</div>
+			<div class="description ru">написан русским языком</div>
+			<div class="small-text ua">Текст, який написаний українською мовою</div>
+			<div class="small-text ru">Текст, который написан русским языком</div>
 		</div>
 	</div>
 </header>
 <main>
-	<section class="section-1" id="section-1">
+	<section class="section-1" >
 		<div class="container">
-			<div class="content-image-wrapper">
+			<div class="content-image-wrapper" id="section-1">
 				<img src="img/test.jpg" alt="">
 				<span class="section-image-text">Section-1</span>
 			</div>
 			<div class="content-item">
-
 				<div class="text-composition">
 					<div class="content-title">
 						Section-1
@@ -105,34 +116,70 @@
 					</div>
 				</div>
 			</div>
+			<div class="content-image-wrapper" id="section-2">
+				<img src="img/test.jpg" alt="">
+				<span class="section-image-text">Section-2</span>
+			</div>
+			<div class="content-item reverse">
+				<div class="image-wrapper">
+					<div class="section-gallery fotorama" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="66"  data-thumbborderwidth="3" data-thumbmargin="20" data-width="100%">
+						<img src="img/decoration.jpg" >
+						<img src="img/decoration.jpg" >
+						<img src="img/bkg.png" >
+						<img src="img/bkg.png" >
+						<img src="img/bkg.png" >
+						<img src="img/bkg.png" >
+					</div>
+				</div>
+				<div class="text-composition">
+					<div class="content-title">
+						Section-2
+					</div>
+					<div class="content-desc">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ullam explicabo architecto repudiandae praesentium dolor, perspiciatis earum rem distinctio magnam, beatae minus accusamus laboriosam necessitatibus nostrum esse reiciendis reprehenderit illo error? Magni distinctio repellendus, quasi possimus. Fugiat adipisci aspernatur eveniet, pariatur error deleniti distinctio aperiam mollitia, similique dolor, recusandae, harum!
+					</div>
+					<div class="buy-more">
+						<div class="buy-more__title">
+							З цим товаром також купують:	
+						</div>
+						<div class="buy-more__content">
+							<ul>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Lorem ipsum dolor sit.</li>
+								<li>Lorem ipsum dolor sit amet, conse.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="section-callback">
 		<div class="container">
 			<div class="callback-wrapper">
 				
-		
-		<form class="callback">
-							<div class="success"><span>Спасибо за заявку!</span></div>
+				
+				<form class="callback">
+					<div class="success"><span>Спасибо за заявку!</span></div>
 
-							<!-- Hidden Required Fields -->
-							<input type="hidden" name="project_name" value="Site Name">
-							<input type="hidden" name="admin_email" value="admin@mail.com">
-							<input type="hidden" name="form_subject" value="Form Subject">
-							<!-- END Hidden Required Fields -->
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Site Name">
+					<input type="hidden" name="admin_email" value="admin@mail.com">
+					<input type="hidden" name="form_subject" value="Form Subject">
+					<!-- END Hidden Required Fields -->
 
-							<input type="hidden" name="Страница" value="">
+					<input type="hidden" name="Страница" value="">
 
-							<div class="callback-logo"></div>
-							<div class="formhead">Оставить заявку</div>
-							<p>Оставьте заявку и мы перезвоним вам в скором времени</p>
+					<div class="callback-logo"></div>
+					<div class="formhead">Оставить заявку</div>
+					<p>Оставьте заявку и мы перезвоним вам в скором времени</p>
 
-							<input type="text" name="Имя" placeholder="Ваше имя..." required>
-							<input type="text" name="Телефон" placeholder="Ваш телефон..." required>
-						
-							<button class="button button-white">Отправить</button>
-						</form>
-</div>
+					<input type="text" name="Имя" placeholder="Ваше имя..." required>
+					<input type="text" name="Телефон" placeholder="Ваш телефон..." required>
+					
+					<button class="button button-white">Отправить</button>
+				</form>
+			</div>
 		</div>
 	</section>
 </main>
