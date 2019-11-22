@@ -73,9 +73,9 @@ a, a > span
 
 
 .ru
-	display: none
+	display: none 
 .hide
-	display: none
+	display: none 
 .show
 	display: block
 
@@ -286,6 +286,8 @@ a, a > span
 	background: url("../img/call-back_bkg.png")
 	background-size: cover
 	position: relative
+	display: grid
+	grid-template-columns: repeat(8,1fr)
 	&::before
 			content: ''
 			position: absolute
@@ -293,9 +295,13 @@ a, a > span
 			right: 0
 			height: 100%
 			background-color: rgba(248, 200, 105, 0.6)
+	.container
+		grid-column-start: 5
+		grid-column-end: 8
+		margin-left: 40px
 	.callback-wrapper
-		display: grid
-		grid-template-columns: repeat(8,1fr)
+		grid-column-start: 4
+		grid-column: span 4
 		position: relative
 		.callback
 			grid-column-start: 5
@@ -304,7 +310,7 @@ a, a > span
 			padding: 10%
 		input, textarea, select,
 		.selectize-control.single .selectize-input.input-active, .selectize-input
-			color: #fff
+			color: #000
 			width: 100%
 			margin-top: 17px
 
@@ -348,9 +354,8 @@ a, a > span
 	bottom: 0
 	text-transform: uppercase
 	font-weight: bold
-	display: flex
-	z-index: 10
 	display: none
+	z-index: 10
 	span
 		margin: auto
 	& ~ *

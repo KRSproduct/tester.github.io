@@ -58,10 +58,11 @@
 							<div class="facebook soc"><i class="fa fa-instagram"></i></div>
 						</div>
 						<div class="multilanguage">
-							<select>
-								<option value="Ua" id="ua">Ua</option>
-								<option value="Ru" id=ru>Ru</option>
-							</select>
+							<div id="ua">
+								ua
+							</div>
+							<div id="ru">ru</div>
+						
 						</div>
 					</div>
 				</div>
@@ -158,25 +159,26 @@
 		<div class="container">
 			<div class="callback-wrapper">
 				
-				
+
 				<form class="callback">
 					<div class="success"><span>Спасибо за заявку!</span></div>
 
 					<!-- Hidden Required Fields -->
 					<input type="hidden" name="project_name" value="Site Name">
-					<input type="hidden" name="admin_email" value="admin@mail.com">
-					<input type="hidden" name="form_subject" value="Form Subject">
+					<input type="hidden" name="admin_email" value="romaburstl@gmail.com">
+					<input type="hidden" name="form_subject" value="Зявка с сайта">
 					<!-- END Hidden Required Fields -->
 
 					<input type="hidden" name="Страница" value="">
-
+			
 					<div class="callback-logo"></div>
 					<div class="formhead">Оставить заявку</div>
 					<p>Оставьте заявку и мы перезвоним вам в скором времени</p>
 
 					<input type="text" name="Имя" placeholder="Ваше имя..." required>
 					<input type="text" name="Телефон" placeholder="Ваш телефон..." required>
-					
+					<textarea type="text" name="Текст" placeholder="Текст..." required></textarea>
+
 					<button class="button button-white">Отправить</button>
 				</form>
 			</div>
